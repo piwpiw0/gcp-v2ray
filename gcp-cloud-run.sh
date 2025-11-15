@@ -92,7 +92,7 @@ select_region() {
 9. europe-west4 (Netherlands 🇳🇱)
 "
     while true; do
-        read -p "Select region (1-8): " region_choice
+        read -p "Select region (1-9): " region_choice
         case $region_choice in
             1) REGION="us-central1"; break;;
             2) REGION="us-west1"; break;;
