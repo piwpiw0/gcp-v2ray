@@ -103,7 +103,7 @@ select_region() {
             7) REGION="asia-northeast1"; break;;
             8) REGION="asia-east1"; break;;
             9) REGION="europe-west4"; break;;
-            *) echo "Invalid (1-8)";;
+            *) echo "Invalid (1-9)";;
         esac
     done
     info "Selected region: $REGION"
