@@ -267,19 +267,17 @@ gcloud run deploy ${SERVICE_NAME} \
     SERVICE_URL=$(gcloud run services describe ${SERVICE_NAME} --region ${REGION} --format 'value(status.url)' --quiet)
     DOMAIN=$(echo $SERVICE_URL | sed 's|https://||')
 
-    START_TIME=$(TZ='Asia/Yangon' date +"%d-%m-%Y (%I:%M %p)")
-    END_TIME=$(TZ='Asia/Yangon' date -d "+5 hours" +"%d-%m-%Y (%I:%M %p)")
+    START_TIME=$(TZ='Afrique/Morocco' date +"%d-%m-%Y (%I:%M %p)")
+    END_TIME=$(TZ='Afrique/Morocco' date -d "+6 hours" +"%d-%m-%Y (%I:%M %p)")
 
-    VLESS_LINK="vless://${UUID}@${HOST_DOMAIN}:443?path=%2Ft.me%40goldenhamzanet&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=${DOMAIN}&fp=randomized&type=ws&sni=${DOMAIN}#${SERVICE_NAME}"
+    VLESS_LINK="vless://${UUID}@${HOST_DOMAIN}:443?path=%2Ft.me%2Fgoldenhamzanet&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=${DOMAIN}&fp=randomized&type=ws&sni=${DOMAIN}#${SERVICE_NAME}"
 
     MESSAGE=$(cat <<EOF
-<blockquote><b>MYTEL GCP VLESS Deployment</b></blockquote>
-━━━━━━━━━━━━━━━━━━━━
-📦<b> Service:</b> <code>${SERVICE_NAME}</code>
+<blockquote><b>IAM0DH🚀GCP VLESS </b></blockquote>
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗<b> Service:</b> <code>${SERVICE_NAME}</code>
 🌍<b> Region:</b> <code>${REGION}</code>
-⚙️<b> Resource:</b> <code>${CPU} CPU | ${MEMORY} RAM</code>
-🔗<b> Domain:</b> <code>${DOMAIN}</code>
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━
 <blockquote><b>GCP V2Ray Access Key</b></blockquote>
 <pre><code>${VLESS_LINK}</code></pre>
 <blockquote>⏳<b> Start:</b> ${START_TIME}
