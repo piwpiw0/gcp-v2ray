@@ -278,7 +278,7 @@ gcloud run deploy ${SERVICE_NAME} \
 🔗<b> Service:</b> <code>${SERVICE_NAME}</code>
 🌍<b> Region:</b> <code>${REGION}</code>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
-<blockquote><b>GCP V2Ray Access Key</b></blockquote>
+<blockquote><b>GCP V2Ray Access Key✅ </b></blockquote>
 <pre><code>${VLESS_LINK}</code></pre>
 <blockquote>⏳<b> Start:</b> ${START_TIME}
 ⏰<b> End:</b>   ${END_TIME}</blockquote>
