@@ -89,10 +89,9 @@ select_region() {
 6. asia-southeast2 (Indonesia 🇮🇩)
 7. asia-northeast1 (Tokyo, Japan 🇯🇵)
 8. asia-east1 (Taiwan 🇹🇼)
-9. europe-west4 (Netherlands 🇳🇱)
 "
     while true; do
-        read -p "Select region (1-9): " region_choice
+        read -p "Select region (1-8): " region_choice
         case $region_choice in
             1) REGION="us-central1"; break;;
             2) REGION="us-west1"; break;;
@@ -102,8 +101,7 @@ select_region() {
             6) REGION="asia-southeast2"; break;;
             7) REGION="asia-northeast1"; break;;
             8) REGION="asia-east1"; break;;
-            9) REGION="europe-west4"; break;;
-            *) echo "Invalid (1-9)";;
+            *) echo "Invalid (1-8)";;
         esac
     done
     info "Selected region: $REGION"
