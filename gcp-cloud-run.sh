@@ -88,7 +88,7 @@ select_region() {
 5. asia-southeast1 (Singapore 🇸🇬)
 6. asia-southeast2 (Indonesia 🇮🇩)
 7. asia-northeast1 (Tokyo, Japan 🇯🇵)
-8. asia-east1 (Taiwan 🇹🇼)
+8. europe-west4 (Nederland 🇳🇱)
 "
     while true; do
         read -p "Select region (1-8): " region_choice
@@ -100,7 +100,7 @@ select_region() {
             5) REGION="asia-southeast1"; break;;
             6) REGION="asia-southeast2"; break;;
             7) REGION="asia-northeast1"; break;;
-            8) REGION="asia-east1"; break;;
+            8) REGION="europe-west4"; break;;
             *) echo "Invalid (1-8)";;
         esac
     done
@@ -165,8 +165,8 @@ get_user_input() {
     if [[ "$TELEGRAM_DESTINATION" != "none" ]]; then
         while true; do read -p "Enter Telegram Bot Token: " TELEGRAM_BOT_TOKEN; validate_bot_token "$TELEGRAM_BOT_TOKEN" && break; done
     fi
-    read -p "Enter host domain [default: m.googleapis.com]: " HOST_DOMAIN
-    HOST_DOMAIN=${HOST_DOMAIN:-"m.googleapis.com"}
+    read -p "Enter host domain [default: goldenhamza.vip-vps.cloudfunctions.net]: " HOST_DOMAIN
+    HOST_DOMAIN=${HOST_DOMAIN:-"goldenhamza.vip-vps.cloudfunctions.net"}
     [[ "$TELEGRAM_DESTINATION" != "none" ]] && get_channel_url
     [[ "$TELEGRAM_DESTINATION" != "none" ]] && get_telegram_ids
 }
@@ -273,7 +273,7 @@ gcloud run deploy ${SERVICE_NAME} \
     VLESS_LINK="vless://${UUID}@${HOST_DOMAIN}:443?path=%2Ft.me%2Fgoldenhamzanet&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=${DOMAIN}&fp=randomized&type=ws&sni=${DOMAIN}#${SERVICE_NAME}"
 
     MESSAGE=$(cat <<EOF
-<blockquote><b>IAM0DH🚀GCP VLESS </b></blockquote>
+<blockquote><b>IAM0DH GCP VLESS </b></blockquote>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 🔗<b> Service:</b> <code>${SERVICE_NAME}</code>
 🌍<b> Region:</b> <code>${REGION}</code>
